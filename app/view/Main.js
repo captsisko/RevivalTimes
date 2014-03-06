@@ -4,7 +4,7 @@ Ext.define('RevivalTimes.view.Main', {
     xtype: 'main',
     requires: [
         'Ext.TitleBar',
-        //'Ext.Video'
+        'Ext.ux.slidenavigation.View', //https://github.com/wnielson/sencha-SlideNavigation
     ],
     config: {
         tabBarPosition: 'bottom',
