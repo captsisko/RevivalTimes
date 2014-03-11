@@ -26,6 +26,8 @@ Ext.application({
         'Articles.ArticlesList',
         //
         'sections.CategoriesContainer',
+        'Navigation',
+        'Interface',
     ],
     models: [
         'Message',
@@ -42,6 +44,7 @@ Ext.application({
         'Messages',
         'sections.Category',
         'Articles.Article',
+        'Navigation',
     ],
 
     icon: {
@@ -67,8 +70,8 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
 
         // Initialize the main view
-        Ext.Viewport.add(Ext.create('RevivalTimes.view.Main'));
-        // Ext.Viewport.add(Ext.create('RevivalTimes.view.MessagesContainer'));
+        // Ext.Viewport.add(Ext.create('RevivalTimes.view.Main'));
+        Ext.Viewport.add(Ext.create('RevivalTimes.view.Interface'));
     },
 
     onUpdated: function() {
