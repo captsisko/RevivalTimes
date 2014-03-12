@@ -6,9 +6,24 @@ Ext.define('RevivalTimes.view.Messages', {
         // 'RevivalTimes.view.MessageDisplay',
         'Ext.plugin.ListPaging',
     ],
+   
+    config: {
 
-	config: {
-    
+        items: [
+            {
+                xtype: 'titlebar',
+                title: 'Messages',
+                docked: 'top',
+                items: {
+                    xtype: 'button',
+                    title: 'text',
+                    iconCls: 'list',
+                    action: 'navigation_btn',
+                    iconMask: true,
+                }
+            }
+        ],
+
             hidden: true,
 
     		title: 'Messages',

@@ -8,6 +8,7 @@ Ext.define('RevivalTimes.view.Main', {
     ],
     config: {
         tabBarPosition: 'bottom',
+        iconMask: 'true',
 
         items: [
             {
@@ -17,20 +18,48 @@ Ext.define('RevivalTimes.view.Main', {
                 styleHtmlContent: true,
                 scrollable: true,
 
+                /*items: [
+                    {
+                        xtype: 'titlebar',
+                        title: 'Articles',
+                        docked: 'top',
+                        items: {
+                            xtype: 'button',
+                            title: 'text',
+                            iconCls: 'user',
+                            iconMask: true,
+                        }
+                    }
+                ],*/
+
                 items: {
                     docked: 'top',
                     xtype: 'titlebar',
                     title: 'Revival Times: London and the world for Christ',
-                    items: [
+                    /*items: [
                         {
                             xtype: 'button',
                             // align: 'right',
                             // text: 'Menu',
-                            action: 'navigation_btn',
                             iconCls: 'list',
                             iconMask: true,
                         }
-                    ]
+                    ]*/
+
+                    items: [
+                        {
+                            xtype: 'titlebar',
+                            title: 'Articles',
+                            docked: 'top',
+                            items: {
+                                xtype: 'button',
+                                title: 'text',
+                                iconCls: 'list',
+                                action: 'navigation_btn',
+                                iconMask: true,
+                            }
+                        }
+                    ],
                 },
 
                 html: [
@@ -50,10 +79,10 @@ Ext.define('RevivalTimes.view.Main', {
             },
             {
                 xtype: 'articleslistview'
-            },
+            }/*,
             {
                 xtype: 'categoriescontainer'
-            }/*,
+            },
             {
                 xtype: 'interface'
             }*/

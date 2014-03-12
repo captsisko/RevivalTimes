@@ -53,6 +53,11 @@ Ext.define('RevivalTimes.controller.Navigation', {
 	navigationToggle: function(){
 		console.log('Navigation button clicked: ' + this.getSlide().getFlex());
 
+		/*if( this.getMain().getTabBar().getHidden() == true )
+			this.getMain().getTabBar().show();
+		else
+			this.getMain().getTabBar().hide();*/
+
 		if( this.getSlide().getFlex() > 0 ){
 			this.getSlide().setFlex(0);
 		}

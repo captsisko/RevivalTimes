@@ -4,7 +4,7 @@ Ext.define('RevivalTimes.view.sections.Categories', {
 	xtype: 'categoriesview',
 
 	config: {
-		title: 'Sections [List]',
+		title: 'Sections',
 		iconCls: 'settings',
 
 		store: 'Categories',
@@ -14,10 +14,18 @@ Ext.define('RevivalTimes.view.sections.Categories', {
 
 		items: [
 			{
-				xtype: 'toolbar',
+				xtype: 'titlebar',
 				title: 'Sections',
 				docked: 'top',
+				items: {
+					xtype: 'button',
+					title: 'text',
+					iconCls: 'list',
+                    action: 'navigation_btn',
+					iconMask: true,
+				}
 			}
 		],
+
 	}
 });
