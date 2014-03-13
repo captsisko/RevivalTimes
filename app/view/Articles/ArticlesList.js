@@ -11,7 +11,7 @@ Ext.define('RevivalTimes.view.Articles.ArticlesList', {
 
 		onItemDisclosure: true,
 
-		items: [
+		/*items: [
 			{
 				xtype: 'titlebar',
 				title: 'Articles',
@@ -24,7 +24,7 @@ Ext.define('RevivalTimes.view.Articles.ArticlesList', {
 					iconMask: true,
 				}
 			}
-		],
+		],*/
 
 	}//config
 });

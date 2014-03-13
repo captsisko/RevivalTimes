@@ -12,7 +12,7 @@ Ext.define('RevivalTimes.view.sections.Categories', {
 
 		onItemDisclosure: true,
 
-		items: [
+		/*items: [
 			{
 				xtype: 'titlebar',
 				title: 'Sections',
@@ -25,7 +25,7 @@ Ext.define('RevivalTimes.view.sections.Categories', {
 					iconMask: true,
 				}
 			}
-		],
+		],*/
 
 	}
 });

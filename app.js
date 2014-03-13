@@ -72,6 +72,7 @@ Ext.application({
         // Initialize the main view
         // Ext.Viewport.add(Ext.create('RevivalTimes.view.Main'));
         Ext.Viewport.add(Ext.create('RevivalTimes.view.Interface'));
+Ext.Viewport.add({xtype: 'container', html: 'My new container!'});
     },
 
     onUpdated: function() {

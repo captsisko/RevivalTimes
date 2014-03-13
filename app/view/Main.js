@@ -38,16 +38,6 @@ Ext.define('RevivalTimes.view.Main', {
                     title: 'Revival Times: London and the world for Christ',
                     /*items: [
                         {
-                            xtype: 'button',
-                            // align: 'right',
-                            // text: 'Menu',
-                            iconCls: 'list',
-                            iconMask: true,
-                        }
-                    ]*/
-
-                    items: [
-                        {
                             xtype: 'titlebar',
                             title: 'Articles',
                             docked: 'top',
@@ -59,7 +49,7 @@ Ext.define('RevivalTimes.view.Main', {
                                 iconMask: true,
                             }
                         }
-                    ],
+                    ]*/
                 },
 
                 html: [

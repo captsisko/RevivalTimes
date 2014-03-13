@@ -9,7 +9,7 @@ Ext.define('RevivalTimes.view.Messages', {
    
     config: {
 
-        items: [
+        /*items: [
             {
                 xtype: 'titlebar',
                 title: 'Messages',
@@ -22,7 +22,7 @@ Ext.define('RevivalTimes.view.Messages', {
                     iconMask: true,
                 }
             }
-        ],
+        ],*/
 
             hidden: true,
 
