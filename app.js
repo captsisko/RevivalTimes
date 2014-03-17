@@ -26,6 +26,8 @@ Ext.application({
         'Articles.ArticlesList',
         //
         'sections.CategoriesContainer',
+        //
+        'Navigation',
     ],
     models: [
         'Message',
@@ -42,6 +44,7 @@ Ext.application({
         'Messages',
         'sections.Category',
         'Articles.Article',
+        'Navigation',
     ],
 
     icon: {

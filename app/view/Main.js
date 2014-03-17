@@ -21,11 +21,15 @@ Ext.define('RevivalTimes.view.Main', {
                     docked: 'top',
                     xtype: 'titlebar',
                     title: 'Revival Times: London and the world for Christ',
-                    items: {
-                        xtype: 'titlebar',
-                        title: 'test',
-                        docked: 'bottom'
-                    }
+                    // items: {
+                        items :[{
+                            align : 'left',
+                            name : 'nav_btn',
+                            iconCls : 'list',
+                            iconMask: true,
+                            ui : 'plain'
+                        }]
+                    // }
                 },
 
                 html: [
