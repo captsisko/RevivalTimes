@@ -172,6 +172,16 @@ Ext.define('Ext.Toolbar', {
             type: 'hbox',
             align: 'center'
         }
+
+    /*********** my code to add the menu button ****************/
+        /*,items :[{
+            align : 'left',
+            name : 'nav_btn',
+            iconCls : 'list',
+            iconMask: true,
+            ui : 'plain'
+        }]*/
+    /************************************************************/
     },
 
     constructor: function(config) {
