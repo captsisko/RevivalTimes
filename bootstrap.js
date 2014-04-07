@@ -7,18 +7,28 @@
 Ext.Loader.addClassPathMappings({
   "Ext": "touch/src",
   "Ext.device.Purchases.Product": "touch/src/device/purchases/Sencha.js",
-  "Ext.device.Purchases.Purchase": "touch/src/device/purchases/Sencha.js",
+  "Ext.device.filesystem.DirectoryEntry": "touch/src/device/filesystem/HTML5.js",
+  "Ext.device.filesystem.Entry": "touch/src/device/filesystem/HTML5.js",
+  "Ext.device.filesystem.FileEntry": "touch/src/device/filesystem/HTML5.js",
+  "Ext.device.filesystem.FileSystem": "touch/src/device/filesystem/HTML5.js",
+  "Ext.device.purchases.Purchase": "touch/src/device/purchases/Sencha.js",
+  "Ext.device.sqlite.Database": "touch/src/device/sqlite/Sencha.js",
+  "Ext.device.sqlite.SQLResultSet": "touch/src/device/sqlite/Sencha.js",
+  "Ext.device.sqlite.SQLResultSetRowList": "touch/src/device/sqlite/Sencha.js",
+  "Ext.device.sqlite.SQLTransaction": "touch/src/device/sqlite/Sencha.js",
   "Ext.draw.engine.SvgContext.Gradient": "touch/src/draw/engine/SvgContext.js",
-  "Ext.ux.auth.model.Session": "touch/src/ux/auth2/model/Session.js",
   "RevivalTimes": "app"
 });
 Ext.ClassManager.addNameAlternateMappings({
   "Ext.AbstractComponent": [],
   "Ext.AbstractManager": [],
+  "Ext.AbstractPlugin": [],
   "Ext.ActionSheet": [],
   "Ext.Ajax": [],
   "Ext.Anim": [],
+  "Ext.AnimationQueue": [],
   "Ext.Audio": [],
+  "Ext.BingMap": [],
   "Ext.Button": [],
   "Ext.Component": [
     "Ext.lib.Component"
@@ -41,10 +51,13 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.Map": [],
   "Ext.Mask": [],
   "Ext.Media": [],
+  "Ext.Menu": [],
   "Ext.MessageBox": [],
   "Ext.Panel": [
     "Ext.lib.Panel"
   ],
+  "Ext.ProgressIndicator": [],
+  "Ext.Promise": [],
   "Ext.SegmentedButton": [],
   "Ext.Sheet": [],
   "Ext.Sortable": [],
@@ -54,7 +67,6 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.Title": [],
   "Ext.TitleBar": [],
   "Ext.Toolbar": [],
-  "Ext.ToolbarCustomized": [],
   "Ext.Video": [],
   "Ext.XTemplate": [],
   "Ext.XTemplateCompiler": [],
@@ -66,7 +78,6 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.app.Profile": [],
   "Ext.app.Route": [],
   "Ext.app.Router": [],
-  "Ext.bb.CrossCut": [],
   "Ext.behavior.Behavior": [],
   "Ext.behavior.Draggable": [],
   "Ext.behavior.Scrollable": [],
@@ -107,6 +118,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.chart.grid.VerticalGrid": [],
   "Ext.chart.interactions.Abstract": [],
   "Ext.chart.interactions.CrossZoom": [],
+  "Ext.chart.interactions.Crosshair": [],
   "Ext.chart.interactions.ItemHighlight": [],
   "Ext.chart.interactions.ItemInfo": [],
   "Ext.chart.interactions.PanZoom": [],
@@ -128,7 +140,6 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.chart.series.Scatter": [],
   "Ext.chart.series.Series": [],
   "Ext.chart.series.StackedCartesian": [],
-  "Ext.chart.series.sprite.AbstractRadial": [],
   "Ext.chart.series.sprite.Aggregative": [],
   "Ext.chart.series.sprite.Area": [],
   "Ext.chart.series.sprite.Bar": [],
@@ -193,6 +204,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.data.identifier.Sequential": [],
   "Ext.data.identifier.Simple": [],
   "Ext.data.identifier.Uuid": [],
+  "Ext.data.plugin.Buffered": [],
   "Ext.data.proxy.Ajax": [
     "Ext.data.HttpProxy",
     "Ext.data.AjaxProxy"
@@ -219,12 +231,14 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.data.proxy.Rest": [
     "Ext.data.RestProxy"
   ],
-  "Ext.data.proxy.SQL": [],
   "Ext.data.proxy.Server": [
     "Ext.data.ServerProxy"
   ],
   "Ext.data.proxy.SessionStorage": [
     "Ext.data.SessionStorageProxy"
+  ],
+  "Ext.data.proxy.Sql": [
+    "Ext.data.proxy.SQL"
   ],
   "Ext.data.proxy.WebStorage": [
     "Ext.data.WebStorageProxy"
@@ -268,49 +282,137 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.dataview.component.Container": [],
   "Ext.dataview.component.DataItem": [],
   "Ext.dataview.component.ListItem": [],
+  "Ext.dataview.component.SimpleListItem": [],
   "Ext.dataview.element.Container": [],
   "Ext.dataview.element.List": [],
+  "Ext.device.Accelerometer": [],
+  "Ext.device.Browser": [],
   "Ext.device.Camera": [],
+  "Ext.device.Capture": [],
   "Ext.device.Communicator": [],
+  "Ext.device.Compass": [],
   "Ext.device.Connection": [],
   "Ext.device.Contacts": [],
   "Ext.device.Device": [],
+  "Ext.device.FileSystem": [],
   "Ext.device.Geolocation": [],
+  "Ext.device.Globalization": [],
+  "Ext.device.Media": [],
   "Ext.device.Notification": [],
   "Ext.device.Orientation": [],
   "Ext.device.Purchases": [],
   "Ext.device.Purchases.Product": [],
-  "Ext.device.Purchases.Purchase": [],
   "Ext.device.Push": [],
+  "Ext.device.SQLite": [],
+  "Ext.device.Splashscreen": [],
+  "Ext.device.Storage": [],
+  "Ext.device.Tunnel": [],
+  "Ext.device.accelerometer.Abstract": [],
+  "Ext.device.accelerometer.Cordova": [
+    "Ext.device.accelerometer.PhoneGap"
+  ],
+  "Ext.device.accelerometer.Simulator": [],
+  "Ext.device.browser.Abstract": [],
+  "Ext.device.browser.Cordova": [],
+  "Ext.device.browser.Simulator": [],
+  "Ext.device.browser.Window": [],
   "Ext.device.camera.Abstract": [],
-  "Ext.device.camera.PhoneGap": [],
+  "Ext.device.camera.Cordova": [
+    "Ext.device.camera.PhoneGap"
+  ],
   "Ext.device.camera.Sencha": [],
   "Ext.device.camera.Simulator": [],
+  "Ext.device.capture.Abstract": [
+    "Ext.device.capture.Simulator"
+  ],
+  "Ext.device.capture.Cordova": [],
   "Ext.device.communicator.Android": [],
   "Ext.device.communicator.Default": [],
+  "Ext.device.compass.Abstract": [],
+  "Ext.device.compass.Cordova": [
+    "Ext.device.compass.PhoneGap"
+  ],
+  "Ext.device.compass.Simulator": [],
   "Ext.device.connection.Abstract": [],
-  "Ext.device.connection.PhoneGap": [],
+  "Ext.device.connection.Cordova": [
+    "Ext.device.connection.PhoneGap"
+  ],
   "Ext.device.connection.Sencha": [],
   "Ext.device.connection.Simulator": [],
   "Ext.device.contacts.Abstract": [],
+  "Ext.device.contacts.Cordova": [
+    "Ext.device.contacts.PhoneGap"
+  ],
   "Ext.device.contacts.Sencha": [],
   "Ext.device.device.Abstract": [],
-  "Ext.device.device.PhoneGap": [],
+  "Ext.device.device.Cordova": [
+    "Ext.device.device.PhoneGap"
+  ],
   "Ext.device.device.Sencha": [],
   "Ext.device.device.Simulator": [],
+  "Ext.device.filesystem.Abstract": [],
+  "Ext.device.filesystem.Chrome": [],
+  "Ext.device.filesystem.Cordova": [
+    "Ext.device.filesystem.PhoneGap"
+  ],
+  "Ext.device.filesystem.DirectoryEntry": [],
+  "Ext.device.filesystem.Entry": [],
+  "Ext.device.filesystem.FileEntry": [],
+  "Ext.device.filesystem.FileSystem": [],
+  "Ext.device.filesystem.HTML5": [],
+  "Ext.device.filesystem.Sencha": [],
+  "Ext.device.filesystem.Simulator": [],
   "Ext.device.geolocation.Abstract": [],
+  "Ext.device.geolocation.Cordova": [
+    "Ext.device.geolocation.PhoneGap"
+  ],
   "Ext.device.geolocation.Sencha": [],
   "Ext.device.geolocation.Simulator": [],
+  "Ext.device.globalization.Abstract": [],
+  "Ext.device.globalization.Cordova": [
+    "Ext.device.globalization.PhoneGap"
+  ],
+  "Ext.device.globalization.Simulator": [],
+  "Ext.device.media.Abstract": [],
+  "Ext.device.media.Cordova": [
+    "Ext.device.media.PhoneGap"
+  ],
   "Ext.device.notification.Abstract": [],
-  "Ext.device.notification.PhoneGap": [],
+  "Ext.device.notification.Cordova": [
+    "Ext.device.notification.PhoneGap"
+  ],
   "Ext.device.notification.Sencha": [],
   "Ext.device.notification.Simulator": [],
   "Ext.device.orientation.Abstract": [],
   "Ext.device.orientation.HTML5": [],
   "Ext.device.orientation.Sencha": [],
+  "Ext.device.purchases.Purchase": [],
   "Ext.device.purchases.Sencha": [],
   "Ext.device.push.Abstract": [],
+  "Ext.device.push.Cordova": [],
   "Ext.device.push.Sencha": [],
+  "Ext.device.splashscreen.Abstract": [],
+  "Ext.device.splashscreen.Cordova": [
+    "Ext.device.splashscreen.PhoneGap"
+  ],
+  "Ext.device.splashscreen.Simulator": [],
+  "Ext.device.sqlite.Database": [],
+  "Ext.device.sqlite.SQLResultSet": [],
+  "Ext.device.sqlite.SQLResultSetRowList": [],
+  "Ext.device.sqlite.SQLTransaction": [],
+  "Ext.device.sqlite.Sencha": [],
+  "Ext.device.storage.Abstract": [],
+  "Ext.device.storage.Cordova": [
+    "Ext.device.storage.PhoneGap"
+  ],
+  "Ext.device.storage.HTML5.Database": [],
+  "Ext.device.storage.HTML5.HTML5": [],
+  "Ext.device.storage.HTML5.SQLStatement": [],
+  "Ext.device.storage.Simulator": [],
+  "Ext.device.tunnel.Abstract": [],
+  "Ext.device.tunnel.Connection": [],
+  "Ext.device.tunnel.Sencha": [],
+  "Ext.device.tunnel.Simulator": [],
   "Ext.direct.Event": [],
   "Ext.direct.ExceptionEvent": [],
   "Ext.direct.JsonProvider": [],
@@ -345,6 +447,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.draw.engine.Svg": [],
   "Ext.draw.engine.SvgContext": [],
   "Ext.draw.engine.SvgContext.Gradient": [],
+  "Ext.draw.engine.SvgExporter": [],
   "Ext.draw.gradient.Gradient": [],
   "Ext.draw.gradient.Linear": [],
   "Ext.draw.gradient.Radial": [],
@@ -360,8 +463,10 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.draw.sprite.Composite": [],
   "Ext.draw.sprite.Ellipse": [],
   "Ext.draw.sprite.EllipticalArc": [],
+  "Ext.draw.sprite.GradientDefinition": [],
   "Ext.draw.sprite.Image": [],
   "Ext.draw.sprite.Instancing": [],
+  "Ext.draw.sprite.Line": [],
   "Ext.draw.sprite.Path": [],
   "Ext.draw.sprite.Rect": [],
   "Ext.draw.sprite.Sector": [],
@@ -385,6 +490,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.event.publisher.TouchGesture": [],
   "Ext.event.recognizer.DoubleTap": [],
   "Ext.event.recognizer.Drag": [],
+  "Ext.event.recognizer.EdgeSwipe": [],
   "Ext.event.recognizer.HorizontalSwipe": [],
   "Ext.event.recognizer.LongPress": [],
   "Ext.event.recognizer.MultiTouch": [],
@@ -402,12 +508,17 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.field.DatePicker": [
     "Ext.form.DatePicker"
   ],
+  "Ext.field.DatePickerNative": [
+    "Ext.form.DatePickerNative"
+  ],
   "Ext.field.Email": [
     "Ext.form.Email"
   ],
   "Ext.field.Field": [
     "Ext.form.Field"
   ],
+  "Ext.field.File": [],
+  "Ext.field.FileInput": [],
   "Ext.field.Hidden": [
     "Ext.form.Hidden"
   ],
@@ -514,6 +625,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.mixin.Observable": [
     "Ext.util.Observable"
   ],
+  "Ext.mixin.Progressable": [],
   "Ext.mixin.Selectable": [],
   "Ext.mixin.Sortable": [],
   "Ext.mixin.Templatable": [],
@@ -531,8 +643,10 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.picker.Slot": [
     "Ext.Picker.Slot"
   ],
+  "Ext.plugin.BufferedList": [],
   "Ext.plugin.ListPaging": [],
   "Ext.plugin.PullRefresh": [],
+  "Ext.plugin.SortableList": [],
   "Ext.scroll.Indicator": [
     "Ext.util.Indicator"
   ],
@@ -542,9 +656,8 @@ Ext.ClassManager.addNameAlternateMappings({
   ],
   "Ext.scroll.indicator.Abstract": [],
   "Ext.scroll.indicator.CssTransform": [],
-  "Ext.scroll.indicator.Default": [],
+  "Ext.scroll.indicator.Rounded": [],
   "Ext.scroll.indicator.ScrollPosition": [],
-  "Ext.scroll.indicator.Throttled": [],
   "Ext.slider.Slider": [],
   "Ext.slider.Thumb": [],
   "Ext.slider.Toggle": [],
@@ -561,6 +674,8 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.table.Row": [],
   "Ext.table.Table": [],
   "Ext.util.AbstractMixedCollection": [],
+  "Ext.util.Audio": [],
+  "Ext.util.BufferedCollection": [],
   "Ext.util.Collection": [],
   "Ext.util.DelayedTask": [],
   "Ext.util.Draggable": [],
@@ -573,6 +688,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.util.Grouper": [],
   "Ext.util.HashMap": [],
   "Ext.util.Inflector": [],
+  "Ext.util.InputBlocker": [],
   "Ext.util.LineSegment": [],
   "Ext.util.MixedCollection": [],
   "Ext.util.Offset": [],
@@ -592,6 +708,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.util.paintmonitor.CssAnimation": [],
   "Ext.util.paintmonitor.OverflowChange": [],
   "Ext.util.sizemonitor.Abstract": [],
+  "Ext.util.sizemonitor.Default": [],
   "Ext.util.sizemonitor.OverflowChange": [],
   "Ext.util.sizemonitor.Scroll": [],
   "Ext.util.translatable.Abstract": [],
@@ -599,13 +716,33 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.util.translatable.CssTransform": [],
   "Ext.util.translatable.Dom": [],
   "Ext.util.translatable.ScrollPosition": [],
-  "Ext.ux.Faker": [],
-  "Ext.ux.auth.Session": [],
-  "Ext.ux.auth.model.Session": [],
+  "Ext.ux.ActionOverFlowMenuButton": [],
+  "Ext.ux.ApplicationMenu": [],
+  "Ext.ux.ContextMenu": [],
+  "Ext.ux.MenuButton": [],
+  "Ext.ux.TabMenuButton": [],
+  "Ext.ux.device.Analytics": [],
+  "Ext.ux.device.Twitter": [],
+  "Ext.ux.device.analytics.Abstract": [],
+  "Ext.ux.device.analytics.Cordova": [],
+  "Ext.ux.device.twitter.Abstract": [],
+  "Ext.ux.device.twitter.Cordova": [],
+  "Ext.ux.parse.Helper": [
+    "ParseHelper"
+  ],
+  "Ext.ux.parse.Model": [],
+  "Ext.ux.parse.Proxy": [],
+  "Ext.ux.parse.Reader": [],
+  "Ext.ux.parse.Store": [],
+  "Ext.ux.parse.association.Pointer": [],
+  "Ext.ux.parse.association.Relation": [],
   "Ext.viewport.Android": [],
   "Ext.viewport.Default": [],
   "Ext.viewport.Ios": [],
   "Ext.viewport.Viewport": [],
+  "Ext.viewport.WindowsPhone": [
+    "Ext.viewport.WP"
+  ],
   "RevivalTimes.controller.Articles.Article": [],
   "RevivalTimes.controller.Messages": [],
   "RevivalTimes.controller.Navigation": [],
@@ -617,6 +754,8 @@ Ext.ClassManager.addNameAlternateMappings({
   "RevivalTimes.store.Messages": [],
   "RevivalTimes.store.sections.Categories": [],
   "RevivalTimes.view.Articles.ArticlesList": [],
+  "RevivalTimes.view.Chart": [],
+  "RevivalTimes.view.ChartContainer": [],
   "RevivalTimes.view.Main": [],
   "RevivalTimes.view.MessageDisplay": [],
   "RevivalTimes.view.Messages": [],
@@ -629,13 +768,18 @@ Ext.ClassManager.addNameAlternateMappings({
 Ext.ClassManager.addNameAliasMappings({
   "Ext.AbstractComponent": [],
   "Ext.AbstractManager": [],
+  "Ext.AbstractPlugin": [],
   "Ext.ActionSheet": [
     "widget.actionsheet"
   ],
   "Ext.Ajax": [],
   "Ext.Anim": [],
+  "Ext.AnimationQueue": [],
   "Ext.Audio": [
     "widget.audio"
+  ],
+  "Ext.BingMap": [
+    "widget.bingmap"
   ],
   "Ext.Button": [
     "widget.button"
@@ -670,10 +814,17 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.Media": [
     "widget.media"
   ],
+  "Ext.Menu": [
+    "widget.menu"
+  ],
   "Ext.MessageBox": [],
   "Ext.Panel": [
     "widget.panel"
   ],
+  "Ext.ProgressIndicator": [
+    "widget.progressindicator"
+  ],
+  "Ext.Promise": [],
   "Ext.SegmentedButton": [
     "widget.segmentedbutton"
   ],
@@ -695,9 +846,6 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.Toolbar": [
     "widget.toolbar"
   ],
-  "Ext.ToolbarCustomized": [
-    "widget.toolbarcustomized"
-  ],
   "Ext.Video": [
     "widget.video"
   ],
@@ -711,9 +859,6 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.app.Profile": [],
   "Ext.app.Route": [],
   "Ext.app.Router": [],
-  "Ext.bb.CrossCut": [
-    "widget.crosscut"
-  ],
   "Ext.behavior.Behavior": [],
   "Ext.behavior.Draggable": [],
   "Ext.behavior.Scrollable": [],
@@ -793,6 +938,9 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.chart.interactions.CrossZoom": [
     "interaction.crosszoom"
   ],
+  "Ext.chart.interactions.Crosshair": [
+    "interaction.crosshair"
+  ],
   "Ext.chart.interactions.ItemHighlight": [
     "interaction.itemhighlight"
   ],
@@ -842,7 +990,6 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "Ext.chart.series.Series": [],
   "Ext.chart.series.StackedCartesian": [],
-  "Ext.chart.series.sprite.AbstractRadial": [],
   "Ext.chart.series.sprite.Aggregative": [],
   "Ext.chart.series.sprite.Area": [
     "sprite.areaSeries"
@@ -926,6 +1073,9 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.data.identifier.Uuid": [
     "data.identifier.uuid"
   ],
+  "Ext.data.plugin.Buffered": [
+    "plugin.storebuffered"
+  ],
   "Ext.data.proxy.Ajax": [
     "proxy.ajax"
   ],
@@ -949,14 +1099,14 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.data.proxy.Rest": [
     "proxy.rest"
   ],
-  "Ext.data.proxy.SQL": [
-    "proxy.sql"
-  ],
   "Ext.data.proxy.Server": [
     "proxy.server"
   ],
   "Ext.data.proxy.SessionStorage": [
     "proxy.sessionstorage"
+  ],
+  "Ext.data.proxy.Sql": [
+    "proxy.sql"
   ],
   "Ext.data.proxy.WebStorage": [],
   "Ext.data.reader.Array": [
@@ -998,49 +1148,111 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.dataview.component.ListItem": [
     "widget.listitem"
   ],
+  "Ext.dataview.component.SimpleListItem": [
+    "widget.simplelistitem"
+  ],
   "Ext.dataview.element.Container": [],
   "Ext.dataview.element.List": [],
+  "Ext.device.Accelerometer": [],
+  "Ext.device.Browser": [],
   "Ext.device.Camera": [],
+  "Ext.device.Capture": [],
   "Ext.device.Communicator": [],
+  "Ext.device.Compass": [],
   "Ext.device.Connection": [],
   "Ext.device.Contacts": [],
   "Ext.device.Device": [],
+  "Ext.device.FileSystem": [],
   "Ext.device.Geolocation": [],
+  "Ext.device.Globalization": [],
+  "Ext.device.Media": [],
   "Ext.device.Notification": [],
   "Ext.device.Orientation": [],
   "Ext.device.Purchases": [],
   "Ext.device.Purchases.Product": [],
-  "Ext.device.Purchases.Purchase": [],
   "Ext.device.Push": [],
+  "Ext.device.SQLite": [],
+  "Ext.device.Splashscreen": [],
+  "Ext.device.Storage": [],
+  "Ext.device.Tunnel": [],
+  "Ext.device.accelerometer.Abstract": [],
+  "Ext.device.accelerometer.Cordova": [],
+  "Ext.device.accelerometer.Simulator": [],
+  "Ext.device.browser.Abstract": [],
+  "Ext.device.browser.Cordova": [],
+  "Ext.device.browser.Simulator": [],
+  "Ext.device.browser.Window": [],
   "Ext.device.camera.Abstract": [],
-  "Ext.device.camera.PhoneGap": [],
+  "Ext.device.camera.Cordova": [],
   "Ext.device.camera.Sencha": [],
   "Ext.device.camera.Simulator": [],
+  "Ext.device.capture.Abstract": [],
+  "Ext.device.capture.Cordova": [],
   "Ext.device.communicator.Android": [],
   "Ext.device.communicator.Default": [],
+  "Ext.device.compass.Abstract": [],
+  "Ext.device.compass.Cordova": [],
+  "Ext.device.compass.Simulator": [],
   "Ext.device.connection.Abstract": [],
-  "Ext.device.connection.PhoneGap": [],
+  "Ext.device.connection.Cordova": [],
   "Ext.device.connection.Sencha": [],
   "Ext.device.connection.Simulator": [],
   "Ext.device.contacts.Abstract": [],
+  "Ext.device.contacts.Cordova": [],
   "Ext.device.contacts.Sencha": [],
   "Ext.device.device.Abstract": [],
-  "Ext.device.device.PhoneGap": [],
+  "Ext.device.device.Cordova": [],
   "Ext.device.device.Sencha": [],
   "Ext.device.device.Simulator": [],
+  "Ext.device.filesystem.Abstract": [],
+  "Ext.device.filesystem.Chrome": [],
+  "Ext.device.filesystem.Cordova": [],
+  "Ext.device.filesystem.DirectoryEntry": [],
+  "Ext.device.filesystem.Entry": [],
+  "Ext.device.filesystem.FileEntry": [],
+  "Ext.device.filesystem.FileSystem": [],
+  "Ext.device.filesystem.HTML5": [],
+  "Ext.device.filesystem.Sencha": [],
+  "Ext.device.filesystem.Simulator": [],
   "Ext.device.geolocation.Abstract": [],
+  "Ext.device.geolocation.Cordova": [],
   "Ext.device.geolocation.Sencha": [],
   "Ext.device.geolocation.Simulator": [],
+  "Ext.device.globalization.Abstract": [],
+  "Ext.device.globalization.Cordova": [],
+  "Ext.device.globalization.Simulator": [],
+  "Ext.device.media.Abstract": [],
+  "Ext.device.media.Cordova": [],
   "Ext.device.notification.Abstract": [],
-  "Ext.device.notification.PhoneGap": [],
+  "Ext.device.notification.Cordova": [],
   "Ext.device.notification.Sencha": [],
   "Ext.device.notification.Simulator": [],
   "Ext.device.orientation.Abstract": [],
   "Ext.device.orientation.HTML5": [],
   "Ext.device.orientation.Sencha": [],
+  "Ext.device.purchases.Purchase": [],
   "Ext.device.purchases.Sencha": [],
   "Ext.device.push.Abstract": [],
+  "Ext.device.push.Cordova": [],
   "Ext.device.push.Sencha": [],
+  "Ext.device.splashscreen.Abstract": [],
+  "Ext.device.splashscreen.Cordova": [],
+  "Ext.device.splashscreen.Simulator": [],
+  "Ext.device.sqlite.Database": [],
+  "Ext.device.sqlite.SQLResultSet": [],
+  "Ext.device.sqlite.SQLResultSetRowList": [],
+  "Ext.device.sqlite.SQLTransaction": [],
+  "Ext.device.sqlite.Sencha": [],
+  "Ext.device.storage.Abstract": [],
+  "Ext.device.storage.Cordova": [],
+  "Ext.device.storage.HTML5.Database": [],
+  "Ext.device.storage.HTML5.HTML5": [],
+  "Ext.device.storage.HTML5.SQLStatement": [],
+  "Ext.device.storage.Simulator": [],
+  "Ext.device.tunnel.Abstract": [],
+  "Ext.device.tunnel.Connection": [],
+  "Ext.device.tunnel.Sencha": [],
+  "Ext.device.tunnel.Simulator": [],
   "Ext.direct.Event": [
     "direct.event"
   ],
@@ -1089,6 +1301,7 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.draw.engine.Svg": [],
   "Ext.draw.engine.SvgContext": [],
   "Ext.draw.engine.SvgContext.Gradient": [],
+  "Ext.draw.engine.SvgExporter": [],
   "Ext.draw.gradient.Gradient": [],
   "Ext.draw.gradient.Linear": [],
   "Ext.draw.gradient.Radial": [],
@@ -1120,11 +1333,15 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.draw.sprite.EllipticalArc": [
     "sprite.ellipticalArc"
   ],
+  "Ext.draw.sprite.GradientDefinition": [],
   "Ext.draw.sprite.Image": [
     "sprite.image"
   ],
   "Ext.draw.sprite.Instancing": [
     "sprite.instancing"
+  ],
+  "Ext.draw.sprite.Line": [
+    "sprite.line"
   ],
   "Ext.draw.sprite.Path": [
     "sprite.path"
@@ -1157,6 +1374,7 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.event.publisher.TouchGesture": [],
   "Ext.event.recognizer.DoubleTap": [],
   "Ext.event.recognizer.Drag": [],
+  "Ext.event.recognizer.EdgeSwipe": [],
   "Ext.event.recognizer.HorizontalSwipe": [],
   "Ext.event.recognizer.LongPress": [],
   "Ext.event.recognizer.MultiTouch": [],
@@ -1174,11 +1392,20 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.field.DatePicker": [
     "widget.datepickerfield"
   ],
+  "Ext.field.DatePickerNative": [
+    "widget.datepickernativefield"
+  ],
   "Ext.field.Email": [
     "widget.emailfield"
   ],
   "Ext.field.Field": [
     "widget.field"
+  ],
+  "Ext.field.File": [
+    "widget.filefield"
+  ],
+  "Ext.field.FileInput": [
+    "widget.fileinput"
   ],
   "Ext.field.Hidden": [
     "widget.hiddenfield"
@@ -1344,6 +1571,7 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
   "Ext.mixin.Observable": [],
+  "Ext.mixin.Progressable": [],
   "Ext.mixin.Selectable": [],
   "Ext.mixin.Sortable": [],
   "Ext.mixin.Templatable": [],
@@ -1361,20 +1589,25 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.picker.Slot": [
     "widget.pickerslot"
   ],
+  "Ext.plugin.BufferedList": [
+    "plugin.bufferedlist"
+  ],
   "Ext.plugin.ListPaging": [
     "plugin.listpaging"
   ],
   "Ext.plugin.PullRefresh": [
     "plugin.pullrefresh"
   ],
+  "Ext.plugin.SortableList": [
+    "plugin.sortablelist"
+  ],
   "Ext.scroll.Indicator": [],
   "Ext.scroll.Scroller": [],
   "Ext.scroll.View": [],
   "Ext.scroll.indicator.Abstract": [],
   "Ext.scroll.indicator.CssTransform": [],
-  "Ext.scroll.indicator.Default": [],
+  "Ext.scroll.indicator.Rounded": [],
   "Ext.scroll.indicator.ScrollPosition": [],
-  "Ext.scroll.indicator.Throttled": [],
   "Ext.slider.Slider": [
     "widget.slider"
   ],
@@ -1401,6 +1634,8 @@ Ext.ClassManager.addNameAliasMappings({
     "widget.table"
   ],
   "Ext.util.AbstractMixedCollection": [],
+  "Ext.util.Audio": [],
+  "Ext.util.BufferedCollection": [],
   "Ext.util.Collection": [],
   "Ext.util.DelayedTask": [],
   "Ext.util.Draggable": [],
@@ -1411,6 +1646,7 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.util.Grouper": [],
   "Ext.util.HashMap": [],
   "Ext.util.Inflector": [],
+  "Ext.util.InputBlocker": [],
   "Ext.util.LineSegment": [],
   "Ext.util.MixedCollection": [],
   "Ext.util.Offset": [],
@@ -1430,6 +1666,7 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.util.paintmonitor.CssAnimation": [],
   "Ext.util.paintmonitor.OverflowChange": [],
   "Ext.util.sizemonitor.Abstract": [],
+  "Ext.util.sizemonitor.Default": [],
   "Ext.util.sizemonitor.OverflowChange": [],
   "Ext.util.sizemonitor.Scroll": [],
   "Ext.util.translatable.Abstract": [],
@@ -1437,15 +1674,39 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.util.translatable.CssTransform": [],
   "Ext.util.translatable.Dom": [],
   "Ext.util.translatable.ScrollPosition": [],
-  "Ext.ux.Faker": [],
-  "Ext.ux.auth.Session": [],
-  "Ext.ux.auth.model.Session": [],
+  "Ext.ux.ActionOverFlowMenuButton": [],
+  "Ext.ux.ApplicationMenu": [],
+  "Ext.ux.ContextMenu": [],
+  "Ext.ux.MenuButton": [],
+  "Ext.ux.TabMenuButton": [],
+  "Ext.ux.device.Analytics": [],
+  "Ext.ux.device.Twitter": [],
+  "Ext.ux.device.analytics.Abstract": [],
+  "Ext.ux.device.analytics.Cordova": [],
+  "Ext.ux.device.twitter.Abstract": [],
+  "Ext.ux.device.twitter.Cordova": [],
+  "Ext.ux.parse.Helper": [],
+  "Ext.ux.parse.Model": [],
+  "Ext.ux.parse.Proxy": [
+    "proxy.parse"
+  ],
+  "Ext.ux.parse.Reader": [
+    "reader.parse"
+  ],
+  "Ext.ux.parse.Store": [],
+  "Ext.ux.parse.association.Pointer": [
+    "association.pointer"
+  ],
+  "Ext.ux.parse.association.Relation": [
+    "association.relation"
+  ],
   "Ext.viewport.Android": [],
   "Ext.viewport.Default": [
     "widget.viewport"
   ],
   "Ext.viewport.Ios": [],
   "Ext.viewport.Viewport": [],
+  "Ext.viewport.WindowsPhone": [],
   "RevivalTimes.controller.Articles.Article": [],
   "RevivalTimes.controller.Messages": [],
   "RevivalTimes.controller.Navigation": [],
@@ -1458,6 +1719,12 @@ Ext.ClassManager.addNameAliasMappings({
   "RevivalTimes.store.sections.Categories": [],
   "RevivalTimes.view.Articles.ArticlesList": [
     "widget.articleslistview"
+  ],
+  "RevivalTimes.view.Chart": [
+    "widget.chart"
+  ],
+  "RevivalTimes.view.ChartContainer": [
+    "widget.chartcontainer"
   ],
   "RevivalTimes.view.Main": [
     "widget.main"
