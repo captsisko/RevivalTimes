@@ -10818,5 +10818,5 @@ input[type="search"]::-webkit-search-cancel-button {
 /* For left side navigation ENDS */
 /* line 93, styles/theme.scss */
 div#ext-tabbar-1 {
-  display: none;
+  /*display: none;*/
 }

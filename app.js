@@ -16,36 +16,9 @@ Ext.application({
     requires: [
         'Ext.MessageBox'
     ],
-   
+
     views: [
-        'Main',
-        'Viewport',
-        'Messages',
-        // 'MessageDisplay',
-        // 'MessagesContainer',
-        'sections.Categories',
-        'Articles.ArticlesList',
-        //
-        // 'sections.CategoriesContainer',
-        //
-        'Navigation',
-    ],
-    models: [
-        'Message',
-        'sections.Category',
-        'Articles.Article',
-    ],
-    stores: [
-        'Messages',
-        'sections.Categories',
-        'Articles.Articles',
-    ],
-    controllers: [
-        // 'Controller',
-        'Messages',
-        'sections.Category',
-        'Articles.Article',
-        'Navigation',
+        'Main'
     ],
 
     icon: {
@@ -71,8 +44,7 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
 
         // Initialize the main view
-        // Ext.Viewport.add(Ext.create('RevivalTimes.view.Main'));
-        Ext.Viewport.add(Ext.create('RevivalTimes.view.Viewport'));
+        Ext.Viewport.add(Ext.create('RevivalTimes.view.Main'));
     },
 
     onUpdated: function() {

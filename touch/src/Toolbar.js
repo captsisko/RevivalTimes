@@ -137,7 +137,7 @@ Ext.define('Ext.Toolbar', {
          * The minimum height height of the Toolbar.
          * @accessor
          */
-        minHeight: '2.6em',
+        minHeight: null,
 
         /**
          * @cfg {Object/String} layout Configuration for this Container's layout. Example:
@@ -172,17 +172,9 @@ Ext.define('Ext.Toolbar', {
             type: 'hbox',
             align: 'center'
         }
-
-    /*********** my code to add the menu button ****************/
-        /*,items :[{
-            align : 'left',
-            name : 'nav_btn',
-            iconCls : 'list',
-            iconMask: true,
-            ui : 'plain'
-        }]*/
-    /************************************************************/
     },
+
+    hasCSSMinHeight: true,
 
     constructor: function(config) {
         config = config || {};
@@ -202,7 +194,7 @@ Ext.define('Ext.Toolbar', {
         if (typeof title == 'string') {
             title = {
                 title: title,
-                centered: true
+                centered : Ext.theme.is.Tizen ? false : true
             };
         }
 

@@ -14,6 +14,8 @@ Ext.define('RevivalTimes.view.Navigation', {
 				title : 'Articles'
 			},{
 				title : 'Sections'
+			},{
+				title : 'Statistics'
 			}
 		]
 	}

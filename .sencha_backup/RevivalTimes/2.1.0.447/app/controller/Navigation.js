@@ -36,6 +36,10 @@ Ext.define('RevivalTimes.controller.Navigation', {
 						case 3:
 							this.getMain().setActiveItem({xtype:'categoriesview'});
 							break;
+						case 4:
+							// this.getMain().setActiveItem({xtype:'chart'});
+							this.getMain().setActiveItem({xtype:'chartcontainer'});
+							break;
 						default:
 							break;
 					}

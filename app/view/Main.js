@@ -19,7 +19,7 @@ Ext.define('RevivalTimes.view.Main', {
                 items: [{
                     docked: 'top',
                     xtype: 'toolbar',
-                    title: 'Revival Times: London and the world for Christ',
+                    title: 'Revival Times',
                     items :[
                         {
                             align : 'left',
@@ -43,7 +43,7 @@ Ext.define('RevivalTimes.view.Main', {
                     "contents of <a target='_blank' href=\"app/view/Main.js\">app/view/Main.js</a> - edit that file ",
                     "and refresh to change what's rendered here."
                 ].join("")
-            }/*,
+            },
             {
                 xtype: 'messagesview'
             },
@@ -55,7 +55,13 @@ Ext.define('RevivalTimes.view.Main', {
             },
             {
                 xtype: 'categoriescontainer'
-            }*/
+            }/*,
+            {
+                xtype: 'chart',
+            }*/,
+            {
+                xtype: 'chartcontainer',
+            }
         ]
 
     } //config
